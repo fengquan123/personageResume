@@ -1,4 +1,4 @@
-# hello-world
+# personage
 
 ## Project setup
 ```
