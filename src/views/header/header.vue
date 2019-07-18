@@ -1,6 +1,6 @@
 <template>
-  <div class="content">
-    <div>RedSpite博客</div>
+  <div class="header_content">
+    <div @click="btn_boke" >RedSpite博客</div>
     <div class="content_top">
       <div>关于我</div>
       <div>求职意向</div>
@@ -11,6 +11,7 @@
     </div>
   </div>
 </template>
+
 
 <script>
 export default {
@@ -36,16 +37,17 @@ export default {
         }
       }
       if (scrollTop < 937) {
-        document.querySelector(".content").classList.remove("fixed");
+        document.querySelector(".header_content").classList.remove("fixed");
       } else if (scrollTop > 937 && scrollTop < 1686) {
-        document.querySelector(".content").classList.add("fixed");
+        document.querySelector(".header_content").classList.add("fixed");
         arr(1);
       } else if (scrollTop > 1686 && scrollTop <2435) {
         arr(2);
       } else {
       }
-      
-    }
+    },
+    btn_boke(){},
+    
   },
   mounted() {
     window.addEventListener("scroll", this.windowScroll);
@@ -54,7 +56,7 @@ export default {
 </script>
 
 <style scoped>
-.content {
+.header_content {
   background: #2c3e50;
   height: 60px;
   width: 100%;
@@ -65,25 +67,25 @@ export default {
   top: 0;
   z-index: 999;
 }
-.content > div:nth-child(1) {
+.header_content > div:nth-child(1) {
   height: 100%;
   line-height: 60px;
   width: 45%;
   text-align: center;
   color: #fff;
 }
-.content > div:nth-child(1):hover {
+.header_content > div:nth-child(1):hover {
   cursor: pointer;
 }
-.content .content_top {
+.header_content .content_top {
   width: 55%;
   height: 100%;
   display: flex;
 }
-.content .content_top > div.show {
+.header_content .content_top > div.show {
   color: yellow;
 }
-.content .content_top > div {
+.header_content .content_top > div {
   height: 100%;
   text-align: center;
   width: 11%;
@@ -91,7 +93,7 @@ export default {
   color: #fff;
   font-size: 14px;
 }
-.content .content_top > div:hover {
+.header_content .content_top > div:hover {
   color: yellow;
   cursor: pointer;
 }

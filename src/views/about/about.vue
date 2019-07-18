@@ -1,5 +1,5 @@
 <template>
-    <div class="content">
+    <div class="about_content">
         关于我
     </div>    
 </template>
@@ -20,7 +20,7 @@ export default {
 </script>
 
 <style>
-    .content{
+    .about_content{
         width:100%;
         height:80vh;
         line-height: 80vh;

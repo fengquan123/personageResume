@@ -1,5 +1,5 @@
 <template>
-    <div class="content">
+    <div class="jobWanted_content">
         求职意向
     </div>
 </template>
@@ -17,7 +17,7 @@ export default {
 </script>
 
 <style>
-.content {
+.jobWanted_content {
   width: 100%;
   height: 80vh;
   line-height: 80vh;
