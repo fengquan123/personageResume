@@ -1,12 +1,12 @@
 <template>
-    <div class="jobWanted_content">
-        求职意向
+    <div class="contactMe_content">
+        联系我
     </div>
 </template>
 
 <script>
 export default {
-  name: "jobWanted",
+  name: "contactMe",
   props: {},
   data() {
     return {};
@@ -17,10 +17,10 @@ export default {
 </script>
 
 <style>
-.jobWanted_content {
+.contactMe_content {
   width: 100%;
-  height: 100vh;
-  line-height: 100vh;
+  height: 80vh;
+  line-height: 80vh;
   text-align: center;
 }
 </style>

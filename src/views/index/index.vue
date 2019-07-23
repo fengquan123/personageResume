@@ -143,6 +143,7 @@ ul.ulImg > li.li_show {
 .divTitle {
   width: 100%;
   height: 100vh;
+  min-height:700px;
   z-index: 999;
   position: absolute;
   top: 0;

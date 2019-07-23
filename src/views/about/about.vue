@@ -21,9 +21,9 @@ export default {
 
 <style>
     .about_content{
-        width:100%;
-        height:80vh;
-        line-height: 80vh;
-        text-align: center;
+        width: 100%;
+  height: 100vh;
+  line-height: 100vh;
+  text-align: center;
     }
 </style>

@@ -18,6 +18,11 @@ export default {
   name: "headers",
   props: {},
   created() {},
+  data(){
+    return{
+      height:window.innerHeight
+    }
+  },
   methods: {
     windowScroll() {
       
@@ -27,8 +32,10 @@ export default {
         window.pageYOffset ||
         document.documentElement.scrollTop ||
         document.body.scrollTop;
+        console.log(scrollTop, '------' , this.height*6);
+
       function arr(e) {
-        for(var i=1;i<5;i++){
+        for(var i=1;i<document.querySelector(".content_top").getElementsByTagName("div").length+1;i++){
           if(i!=e){
             document.querySelector(".content_top>div:nth-child("+i+")").classList.remove("show")
           }else{
@@ -36,21 +43,30 @@ export default {
           }
         }
       }
-      if (scrollTop < 937) {
+      if (scrollTop < this.height) {
         document.querySelector(".header_content").classList.remove("fixed");
-      } else if (scrollTop > 937 && scrollTop < 1686) {
+      } else if (scrollTop > this.height ) {
         document.querySelector(".header_content").classList.add("fixed");
         arr(1);
-      } else if (scrollTop > 1686 && scrollTop <2435) {
-        arr(2);
-      } else {
-      }
+        if (scrollTop > this.height*1.8&& scrollTop < this.height*2.8) {
+          arr(2);
+        } else if (scrollTop > this.height*2.8&& scrollTop < this.height*3.8) {
+          arr(3);
+        } else if (scrollTop > this.height*3.8&& scrollTop < this.height*4.8) {
+          arr(4);
+        } else if (scrollTop > this.height*4.8&& scrollTop < this.height*5.8) {
+          arr(5);
+        } else if (scrollTop > this.height*5.8) {
+          arr(6);
+        }
+      } 
     },
     btn_boke(){},
     
   },
   mounted() {
     window.addEventListener("scroll", this.windowScroll);
+    console.log('----->',document.querySelector(".content_top").getElementsByTagName("div").length);
   }
 };
 </script>

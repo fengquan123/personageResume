@@ -1,12 +1,12 @@
 <template>
-    <div class="jobWanted_content">
-        求职意向
+    <div class="technicalMastery_content">
+        技术掌握
     </div>
 </template>
 
 <script>
 export default {
-  name: "jobWanted",
+  name: "technicalMastery",
   props: {},
   data() {
     return {};
@@ -17,7 +17,7 @@ export default {
 </script>
 
 <style>
-.jobWanted_content {
+.technicalMastery_content {
   width: 100%;
   height: 100vh;
   line-height: 100vh;
